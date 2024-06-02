@@ -21,7 +21,7 @@
     "pg-connection-string": "^2.6.4"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "atistrcsn"
   },
   "strapi": {
     "uuid": "d5f5c158-e89f-4505-847f-4cefe7ccd649"
@@ -29,7 +29,8 @@
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0",
-    "yarn": "4.15.0"
+    "yarn": "4.2.2"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "packageManager": "yarn@4.2.2"
 }
