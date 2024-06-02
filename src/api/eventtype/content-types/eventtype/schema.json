@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eventtypes",
+  "info": {
+    "singularName": "eventtype",
+    "pluralName": "eventtypes",
+    "displayName": "Programok",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 80
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 250,
+      "required": true
+    },
+    "descriptionLongHTML": {
+      "type": "blocks",
+      "required": true
+    },
+    "headingImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

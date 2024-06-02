@@ -677,6 +677,95 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiEventEvent extends Schema.CollectionType {
+  collectionName: 'events';
+  info: {
+    singularName: 'event';
+    pluralName: 'events';
+    displayName: 'Esem\u00E9nyek';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
+    body: Attribute.Blocks & Attribute.Required;
+    eventstart: Attribute.Date;
+    eventend: Attribute.Date;
+    slug: Attribute.UID<'api::event.event', 'title'>;
+    registrationUrl: Attribute.String;
+    registrationUntilDate: Attribute.Date;
+    headingImage: Attribute.Media;
+    eventtype: Attribute.Relation<
+      'api::event.event',
+      'oneToOne',
+      'api::eventtype.eventtype'
+    >;
+    eventplace: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::event.event',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::event.event',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiEventtypeEventtype extends Schema.CollectionType {
+  collectionName: 'eventtypes';
+  info: {
+    singularName: 'eventtype';
+    pluralName: 'eventtypes';
+    displayName: 'Programok';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 80;
+      }>;
+    description: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    descriptionLongHTML: Attribute.Blocks & Attribute.Required;
+    headingImage: Attribute.Media & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::eventtype.eventtype',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::eventtype.eventtype',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -693,6 +782,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::event.event': ApiEventEvent;
+      'api::eventtype.eventtype': ApiEventtypeEventtype;
     }
   }
 }
