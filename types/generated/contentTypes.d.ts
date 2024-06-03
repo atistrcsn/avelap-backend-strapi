@@ -749,6 +749,7 @@ export interface ApiEventtypeEventtype extends Schema.CollectionType {
       }>;
     descriptionLongHTML: Attribute.Blocks & Attribute.Required;
     headingImage: Attribute.Media & Attribute.Required;
+    active: Attribute.Boolean & Attribute.Required & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
