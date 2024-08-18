@@ -1,5 +1,5 @@
 {
-  "name": "Public",
+  "name": "Publikus",
   "description": "Default role given to unauthenticated user.",
   "type": "public",
   "permissions": [

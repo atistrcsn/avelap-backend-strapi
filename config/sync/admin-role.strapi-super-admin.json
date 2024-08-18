@@ -282,6 +282,62 @@
     {
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
+      "subject": "api::tanitas.tanitas",
+      "properties": {
+        "fields": [
+          "cim",
+          "video",
+          "leiras",
+          "rank"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::tanitas.tanitas",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::tanitas.tanitas",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::tanitas.tanitas",
+      "properties": {
+        "fields": [
+          "cim",
+          "video",
+          "leiras",
+          "rank"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::tanitas.tanitas",
+      "properties": {
+        "fields": [
+          "cim",
+          "video",
+          "leiras",
+          "rank"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
       "subject": "api::tanusagtetel.tanusagtetel",
       "properties": {
         "fields": [

@@ -85,7 +85,7 @@
           "editable": true
         },
         "list": {
-          "label": "createdAt",
+          "label": "létrehozva",
           "searchable": true,
           "sortable": true
         }

@@ -1,5 +1,5 @@
 {
-  "name": "Editor",
+  "name": "Szerkesztő",
   "code": "strapi-editor",
   "description": "Editors can manage and publish contents including those of other users.",
   "permissions": [
@@ -125,6 +125,209 @@
           "descriptionLongHTML",
           "headingImage",
           "active"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::gyakori-kerdes.gyakori-kerdes",
+      "properties": {
+        "fields": [
+          "kerdes",
+          "valasz",
+          "rank"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::gyakori-kerdes.gyakori-kerdes",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::gyakori-kerdes.gyakori-kerdes",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::gyakori-kerdes.gyakori-kerdes",
+      "properties": {
+        "fields": [
+          "kerdes",
+          "valasz",
+          "rank"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::gyakori-kerdes.gyakori-kerdes",
+      "properties": {
+        "fields": [
+          "kerdes",
+          "valasz",
+          "rank"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
+      "properties": {
+        "fields": [
+          "tartalom"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
+      "properties": {
+        "fields": [
+          "tartalom"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
+      "properties": {
+        "fields": [
+          "tartalom"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::kapcsolat-oldal.kapcsolat-oldal",
+      "properties": {
+        "fields": [
+          "tartalom"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::kapcsolat-oldal.kapcsolat-oldal",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::kapcsolat-oldal.kapcsolat-oldal",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::kapcsolat-oldal.kapcsolat-oldal",
+      "properties": {
+        "fields": [
+          "tartalom"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::kapcsolat-oldal.kapcsolat-oldal",
+      "properties": {
+        "fields": [
+          "tartalom"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::tanusagtetel.tanusagtetel",
+      "properties": {
+        "fields": [
+          "cim",
+          "video",
+          "leiras",
+          "rank"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::tanusagtetel.tanusagtetel",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::tanusagtetel.tanusagtetel",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::tanusagtetel.tanusagtetel",
+      "properties": {
+        "fields": [
+          "cim",
+          "video",
+          "leiras",
+          "rank"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::tanusagtetel.tanusagtetel",
+      "properties": {
+        "fields": [
+          "cim",
+          "video",
+          "leiras",
+          "rank"
         ]
       },
       "conditions": []

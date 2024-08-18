@@ -1,13 +1,13 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::eventtype.eventtype",
+  "key": "plugin_content_manager_configuration_content_types::api::tanitas.tanitas",
   "value": {
-    "uid": "api::eventtype.eventtype",
+    "uid": "api::tanitas.tanitas",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "title",
+      "mainField": "cim",
       "defaultSortBy": "rank",
       "defaultSortOrder": "ASC"
     },
@@ -20,7 +20,7 @@
           "sortable": true
         }
       },
-      "title": {
+      "cim": {
         "edit": {
           "label": "Cím",
           "description": "",
@@ -29,12 +29,26 @@
           "editable": true
         },
         "list": {
-          "label": "cím",
+          "label": "cim",
           "searchable": true,
           "sortable": true
         }
       },
-      "description": {
+      "video": {
+        "edit": {
+          "label": "Videó URL",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "video",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "leiras": {
         "edit": {
           "label": "Rövid leírás",
           "description": "",
@@ -43,49 +57,7 @@
           "editable": true
         },
         "list": {
-          "label": "rövid leírás",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "descriptionLongHTML": {
-        "edit": {
-          "label": "Hosszú leírás (formázott)",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "descriptionLongHTML",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "headingImage": {
-        "edit": {
-          "label": "Fejléc kép",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "fejléc kép",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "active": {
-        "edit": {
-          "label": "Aktív program",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "active",
+          "label": "leiras",
           "searchable": true,
           "sortable": true
         }
@@ -96,7 +68,7 @@
           "description": "",
           "placeholder": "",
           "visible": true,
-          "editable": false
+          "editable": true
         },
         "list": {
           "label": "rank",
@@ -167,40 +139,27 @@
       "edit": [
         [
           {
-            "name": "title",
+            "name": "cim",
             "size": 6
           }
         ],
         [
           {
-            "name": "headingImage",
-            "size": 6
+            "name": "leiras",
+            "size": 8
           }
         ],
         [
           {
-            "name": "description",
+            "name": "video",
             "size": 12
-          }
-        ],
-        [
-          {
-            "name": "descriptionLongHTML",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "active",
-            "size": 4
           }
         ]
       ],
       "list": [
         "id",
-        "headingImage",
-        "title",
-        "description"
+        "cim",
+        "leiras"
       ]
     }
   },

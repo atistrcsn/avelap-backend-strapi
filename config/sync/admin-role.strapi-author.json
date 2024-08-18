@@ -1,7 +1,7 @@
 {
-  "name": "Author",
+  "name": "Szerző",
   "code": "strapi-author",
-  "description": "Authors can manage the content they have created.",
+  "description": "Kezelheti a saját tartalmait.",
   "permissions": [
     {
       "action": "plugin::content-manager.explorer.create",
@@ -33,6 +33,13 @@
       "conditions": [
         "admin::is-creator"
       ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::event.event",
+      "properties": {},
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.read",

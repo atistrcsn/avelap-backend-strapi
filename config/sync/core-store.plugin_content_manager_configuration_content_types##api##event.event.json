@@ -8,7 +8,7 @@
       "searchable": true,
       "pageSize": 20,
       "mainField": "title",
-      "defaultSortBy": "title",
+      "defaultSortBy": "eventstart",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -17,7 +17,7 @@
         "list": {
           "label": "id",
           "searchable": true,
-          "sortable": true
+          "sortable": false
         }
       },
       "title": {
@@ -57,7 +57,7 @@
           "editable": true
         },
         "list": {
-          "label": "eventstart",
+          "label": "esemény kezdete",
           "searchable": true,
           "sortable": true
         }
@@ -156,9 +156,9 @@
           "editable": true
         },
         "list": {
-          "label": "eventplace",
+          "label": "esemény helyszíne",
           "searchable": true,
-          "sortable": true
+          "sortable": false
         }
       },
       "createdAt": {
@@ -281,7 +281,8 @@
         "id",
         "headingImage",
         "title",
-        "eventplace"
+        "eventplace",
+        "eventstart"
       ]
     }
   },
