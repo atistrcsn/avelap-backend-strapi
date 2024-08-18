@@ -1,0 +1,291 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::event.event",
+  "value": {
+    "uid": "api::event.event",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 20,
+      "mainField": "title",
+      "defaultSortBy": "title",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "title": {
+        "edit": {
+          "label": "Cím",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "cím",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "body": {
+        "edit": {
+          "label": "Tartalom",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "body",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "eventstart": {
+        "edit": {
+          "label": "Esemény kezdete",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "eventstart",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "eventend": {
+        "edit": {
+          "label": "Esemény vége",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "eventend",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "slug": {
+        "edit": {
+          "label": "SEO URL",
+          "description": "A böngésző címsorában megjelenő aloldal URL",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "slug",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "registrationUrl": {
+        "edit": {
+          "label": "Eseményre hol lehet regisztrálni?",
+          "description": "Ez a regisztrációs űrlapra mutató URL legyen",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "registrationUrl",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "registrationUntilDate": {
+        "edit": {
+          "label": "Regisztrációs határidő",
+          "description": "(dátum)",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "registrationUntilDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "headingImage": {
+        "edit": {
+          "label": "Fejléc kép",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "kép",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "eventtype": {
+        "edit": {
+          "label": "Melyik programhoz tartozik?",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "title"
+        },
+        "list": {
+          "label": "eventtype",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "eventplace": {
+        "edit": {
+          "label": "Esemény helyszíne",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "eventplace",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "title",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "headingImage",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "body",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "eventtype",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "eventplace",
+            "size": 4
+          },
+          {
+            "name": "eventstart",
+            "size": 4
+          },
+          {
+            "name": "eventend",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "slug",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "registrationUrl",
+            "size": 6
+          },
+          {
+            "name": "registrationUntilDate",
+            "size": 4
+          }
+        ]
+      ],
+      "list": [
+        "id",
+        "headingImage",
+        "title",
+        "eventplace"
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

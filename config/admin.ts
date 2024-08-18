@@ -16,4 +16,5 @@ export default ({ env }) => ({
   },
   tutorials: false,
   notifications: { releases: false },
+  watchIgnoreFiles: ["**/config/sync/**"],
 });
