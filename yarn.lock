@@ -2312,6 +2312,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sklinet/strapi-plugin-video-field@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "@sklinet/strapi-plugin-video-field@npm:1.0.6"
+  peerDependencies:
+    "@strapi/strapi": ^4.0.0
+  checksum: 10c0/7e00f92470df6bbfde983e9651d803ba8a7ea3a86347742f30da5bade57e31235ccb7706fc7fb8aec9123c6da90e523fe4ad65c16bc9b8be9e46881f66ce4762
+  languageName: node
+  linkType: hard
+
 "@strapi/admin@npm:4.15.0":
   version: 4.15.0
   resolution: "@strapi/admin@npm:4.15.0"
@@ -4214,6 +4223,7 @@ __metadata:
   resolution: "backend@workspace:."
   dependencies:
     "@retikolo/drag-drop-content-types": "npm:^1.6.0"
+    "@sklinet/strapi-plugin-video-field": "npm:^1.0.6"
     "@strapi/plugin-i18n": "npm:4.15.0"
     "@strapi/plugin-users-permissions": "npm:4.15.0"
     "@strapi/provider-upload-cloudinary": "npm:^4.24.4"

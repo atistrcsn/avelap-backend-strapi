@@ -867,6 +867,44 @@ export interface ApiKapcsolatOldalKapcsolatOldal extends Schema.SingleType {
   };
 }
 
+export interface ApiTanusagtetelTanusagtetel extends Schema.CollectionType {
+  collectionName: 'tanusagtetelek';
+  info: {
+    singularName: 'tanusagtetel';
+    pluralName: 'tanusagtetelek';
+    displayName: 'Tan\u00FAs\u00E1gt\u00E9telek';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cim: Attribute.String & Attribute.Required;
+    video: Attribute.JSON & Attribute.CustomField<'plugin::video-field.video'>;
+    leiras: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
+    rank: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::tanusagtetel.tanusagtetel',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::tanusagtetel.tanusagtetel',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -888,6 +926,7 @@ declare module '@strapi/types' {
       'api::gyakori-kerdes.gyakori-kerdes': ApiGyakoriKerdesGyakoriKerdes;
       'api::hasznos-cimek-oldal.hasznos-cimek-oldal': ApiHasznosCimekOldalHasznosCimekOldal;
       'api::kapcsolat-oldal.kapcsolat-oldal': ApiKapcsolatOldalKapcsolatOldal;
+      'api::tanusagtetel.tanusagtetel': ApiTanusagtetelTanusagtetel;
     }
   }
 }
