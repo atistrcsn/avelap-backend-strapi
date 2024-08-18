@@ -706,7 +706,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
       'oneToOne',
       'api::eventtype.eventtype'
     >;
-    eventplace: Attribute.String;
+    eventplace: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -750,6 +750,7 @@ export interface ApiEventtypeEventtype extends Schema.CollectionType {
     descriptionLongHTML: Attribute.Blocks & Attribute.Required;
     headingImage: Attribute.Media & Attribute.Required;
     active: Attribute.Boolean & Attribute.Required & Attribute.DefaultTo<false>;
+    rank: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -760,6 +761,105 @@ export interface ApiEventtypeEventtype extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::eventtype.eventtype',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiGyakoriKerdesGyakoriKerdes extends Schema.CollectionType {
+  collectionName: 'gyakori_kerdesek';
+  info: {
+    singularName: 'gyakori-kerdes';
+    pluralName: 'gyakori-kerdesek';
+    displayName: 'Gyakori k\u00E9rd\u00E9sek';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    kerdes: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 3;
+      }>;
+    valasz: Attribute.Blocks & Attribute.Required;
+    rank: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::gyakori-kerdes.gyakori-kerdes',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::gyakori-kerdes.gyakori-kerdes',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHasznosCimekOldalHasznosCimekOldal
+  extends Schema.SingleType {
+  collectionName: 'hasznos_cimek_oldals';
+  info: {
+    singularName: 'hasznos-cimek-oldal';
+    pluralName: 'hasznos-cimek-oldals';
+    displayName: 'Hasznos c\u00EDmek oldal';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    tartalom: Attribute.Blocks & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hasznos-cimek-oldal.hasznos-cimek-oldal',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hasznos-cimek-oldal.hasznos-cimek-oldal',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiKapcsolatOldalKapcsolatOldal extends Schema.SingleType {
+  collectionName: 'kapcsolat_oldals';
+  info: {
+    singularName: 'kapcsolat-oldal';
+    pluralName: 'kapcsolat-oldals';
+    displayName: 'Kapcsolat oldal';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    tartalom: Attribute.Blocks & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::kapcsolat-oldal.kapcsolat-oldal',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::kapcsolat-oldal.kapcsolat-oldal',
       'oneToOne',
       'admin::user'
     > &
@@ -785,6 +885,9 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::event.event': ApiEventEvent;
       'api::eventtype.eventtype': ApiEventtypeEventtype;
+      'api::gyakori-kerdes.gyakori-kerdes': ApiGyakoriKerdesGyakoriKerdes;
+      'api::hasznos-cimek-oldal.hasznos-cimek-oldal': ApiHasznosCimekOldalHasznosCimekOldal;
+      'api::kapcsolat-oldal.kapcsolat-oldal': ApiKapcsolatOldalKapcsolatOldal;
     }
   }
 }

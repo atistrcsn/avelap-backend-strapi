@@ -52,7 +52,8 @@
       "target": "api::eventtype.eventtype"
     },
     "eventplace": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

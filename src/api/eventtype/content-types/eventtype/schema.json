@@ -38,6 +38,9 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "rank": {
+      "type": "integer"
     }
   }
 }

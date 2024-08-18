@@ -268,6 +268,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.2.0":
+  version: 7.25.0
+  resolution: "@babel/runtime@npm:7.25.0"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 10c0/bd3faf246170826cef2071a94d7b47b49d532351360ecd17722d03f6713fd93a3eb3dbd9518faa778d5e8ccad7392a7a604e56bd37aaad3f3aa68d619ccd983d
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.24.6":
   version: 7.24.6
   resolution: "@babel/template@npm:7.24.6"
@@ -2137,6 +2146,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@retikolo/drag-drop-content-types@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "@retikolo/drag-drop-content-types@npm:1.6.0"
+  dependencies:
+    "@strapi/helper-plugin": "npm:^4.25.0"
+    array-move: "npm:^4.0.0"
+    react-sortable-hoc: "npm:^2.0.0"
+    zod: "npm:^3.20.2"
+  peerDependencies:
+    "@strapi/design-system": ^1.13.1
+    "@strapi/icons": ^1.13.1
+    "@strapi/strapi": ^4.0.0
+  checksum: 10c0/705ac490032740c38e81b9c90601d83e7ff83fcaa1456e057007a45555e5e6cdb4f3773cd60522b828cada8ce0a57cd26fd2575c844388f73f0bd587879946ec
+  languageName: node
+  linkType: hard
+
 "@rushstack/node-core-library@npm:5.4.1":
   version: 5.4.1
   resolution: "@rushstack/node-core-library@npm:5.4.1"
@@ -2517,6 +2542,31 @@ __metadata:
     react-router-dom: ^5.3.4
     styled-components: ^5.3.3
   checksum: 10c0/50779a4ff1c9afefa33636185b02b93eab86d3b2d886590dd3a997f18372a9e7f15bc8027e938cb8b002981907c1fe0f1b5b9b0a7c0d8eef1e3bf1d410666889
+  languageName: node
+  linkType: hard
+
+"@strapi/helper-plugin@npm:^4.25.0":
+  version: 4.25.8
+  resolution: "@strapi/helper-plugin@npm:4.25.8"
+  dependencies:
+    axios: "npm:1.6.0"
+    date-fns: "npm:2.30.0"
+    formik: "npm:2.4.0"
+    immer: "npm:9.0.19"
+    lodash: "npm:4.17.21"
+    qs: "npm:6.11.1"
+    react-helmet: "npm:6.1.0"
+    react-intl: "npm:6.4.1"
+    react-query: "npm:3.39.3"
+    react-select: "npm:5.7.0"
+  peerDependencies:
+    "@strapi/design-system": 1.19.0
+    "@strapi/icons": 1.19.0
+    react: ^17.0.0 || ^18.0.0
+    react-dom: ^17.0.0 || ^18.0.0
+    react-router-dom: ^5.2.0
+    styled-components: ^5.2.1
+  checksum: 10c0/9097f09c041cfd444c65b384e1f467c2d16ea335834658f250563de383587d0c8632d23b4112282f6f20a4d5dc03966826b33dfb732cd4bc87de38e05b6d8409
   languageName: node
   linkType: hard
 
@@ -4034,6 +4084,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"array-move@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "array-move@npm:4.0.0"
+  checksum: 10c0/056eaf4ceeabe6b275d2d96e8628d839a3bf53844f13070de74f73a035ace8f9160800e4288e5fb36226593d39b239f9b63c654a6bb95e05f18aeb345c886acf
+  languageName: node
+  linkType: hard
+
 "array-slice@npm:^1.0.0":
   version: 1.1.0
   resolution: "array-slice@npm:1.1.0"
@@ -4108,6 +4165,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:1.6.0":
+  version: 1.6.0
+  resolution: "axios@npm:1.6.0"
+  dependencies:
+    follow-redirects: "npm:^1.15.0"
+    form-data: "npm:^4.0.0"
+    proxy-from-env: "npm:^1.1.0"
+  checksum: 10c0/2879e17b96cbca7e2096d231a44e2d0f03e657d79f8928ea38ec5fbaf5a5b7bf952d580cdb58a66ba328c26eb3528b89d5a32da57cc5cf89813786c044f7e9d6
+  languageName: node
+  linkType: hard
+
 "b4a@npm:^1.6.4":
   version: 1.6.6
   resolution: "b4a@npm:1.6.6"
@@ -4145,6 +4213,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "backend@workspace:."
   dependencies:
+    "@retikolo/drag-drop-content-types": "npm:^1.6.0"
     "@strapi/plugin-i18n": "npm:4.15.0"
     "@strapi/plugin-users-permissions": "npm:4.15.0"
     "@strapi/provider-upload-cloudinary": "npm:^4.24.4"
@@ -11213,7 +11282,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.6.0, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.5.7, prop-types@npm:^15.6.0, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -11692,6 +11761,21 @@ __metadata:
   peerDependencies:
     react: ^16.3.0 || ^17.0.0 || ^18.0.0
   checksum: 10c0/5d934cae438f701ce646f566750ae6a445e99185ce1a026108f9db728147f7962a22ecf8db79ff26089953a3799b3607766904f4f10194ce42bcd5a1aa0215e8
+  languageName: node
+  linkType: hard
+
+"react-sortable-hoc@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "react-sortable-hoc@npm:2.0.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.2.0"
+    invariant: "npm:^2.2.4"
+    prop-types: "npm:^15.5.7"
+  peerDependencies:
+    prop-types: ^15.5.7
+    react: ^16.3.0 || ^17.0.0
+    react-dom: ^16.3.0 || ^17.0.0
+  checksum: 10c0/084c80d984d2b69886580c9de800b5e2f21edbe9244a7b9bf7d0cae24d568296b76e3e2a95c9f46bd2ecd686a61341f4a68bbe0e2b6eb22c1a32981d3609808a
   languageName: node
   linkType: hard
 
@@ -14440,5 +14524,12 @@ __metadata:
     property-expr: "npm:^2.0.4"
     toposort: "npm:^2.0.2"
   checksum: 10c0/b2adff31f4be85aaad338e6db12a26715b9e11270c587afe051d42c423f7f24de2d184f646047cb5c3b8c65163c37611f8309f2ef4eb6bb7a66688158a081d66
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.20.2":
+  version: 3.23.8
+  resolution: "zod@npm:3.23.8"
+  checksum: 10c0/8f14c87d6b1b53c944c25ce7a28616896319d95bc46a9660fe441adc0ed0a81253b02b5abdaeffedbeb23bdd25a0bf1c29d2c12dd919aef6447652dd295e3e69
   languageName: node
   linkType: hard
