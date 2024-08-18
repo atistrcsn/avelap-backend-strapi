@@ -730,7 +730,7 @@ export interface ApiEventtypeEventtype extends Schema.CollectionType {
   info: {
     singularName: 'eventtype';
     pluralName: 'eventtypes';
-    displayName: 'Programok';
+    displayName: 'Programok, esem\u00E9ny t\u00EDpusok';
     description: '';
   };
   options: {
@@ -867,6 +867,39 @@ export interface ApiKapcsolatOldalKapcsolatOldal extends Schema.SingleType {
   };
 }
 
+export interface ApiTanitasTanitas extends Schema.CollectionType {
+  collectionName: 'tanitasok';
+  info: {
+    singularName: 'tanitas';
+    pluralName: 'tanitasok';
+    displayName: 'Tan\u00EDt\u00E1sok';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cim: Attribute.String & Attribute.Required;
+    video: Attribute.JSON & Attribute.CustomField<'plugin::video-field.video'>;
+    leiras: Attribute.Text;
+    rank: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::tanitas.tanitas',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::tanitas.tanitas',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTanusagtetelTanusagtetel extends Schema.CollectionType {
   collectionName: 'tanusagtetelek';
   info: {
@@ -926,6 +959,7 @@ declare module '@strapi/types' {
       'api::gyakori-kerdes.gyakori-kerdes': ApiGyakoriKerdesGyakoriKerdes;
       'api::hasznos-cimek-oldal.hasznos-cimek-oldal': ApiHasznosCimekOldalHasznosCimekOldal;
       'api::kapcsolat-oldal.kapcsolat-oldal': ApiKapcsolatOldalKapcsolatOldal;
+      'api::tanitas.tanitas': ApiTanitasTanitas;
       'api::tanusagtetel.tanusagtetel': ApiTanusagtetelTanusagtetel;
     }
   }
