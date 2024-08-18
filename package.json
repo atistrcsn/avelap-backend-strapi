@@ -17,8 +17,10 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "@amicaldo/strapi-google-maps": "^1.1.5",
     "@retikolo/drag-drop-content-types": "^1.6.0",
     "@sklinet/strapi-plugin-video-field": "^1.0.6",
+    "@strapi/plugin-documentation": "4.15.0",
     "@strapi/plugin-i18n": "4.15.0",
     "@strapi/plugin-users-permissions": "4.15.0",
     "@strapi/provider-upload-cloudinary": "^4.24.4",
@@ -26,6 +28,7 @@
     "better-sqlite3": "8.6.0",
     "pg": "^8.11.5",
     "pg-connection-string": "^2.6.4",
+    "strapi-location-field-plugin": "^1.2.3",
     "strapi-plugin-config-sync": "^1.2.6"
   },
   "packageManager": "yarn@4.2.2",

@@ -104,6 +104,35 @@
           "sortable": true
         }
       },
+      "slug": {
+        "edit": {
+          "label": "SEO URL",
+          "description": "A böngésző címsorában megjelenő aloldal URL",
+          "placeholder": "",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "slug",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "gyakori_kerdeseks": {
+        "edit": {
+          "label": "gyakori_kerdeseks",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "kerdes"
+        },
+        "list": {
+          "label": "gyakori_kerdeseks",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -164,6 +193,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "headingImage",
+        "title",
+        "description"
+      ],
       "edit": [
         [
           {
@@ -194,13 +229,19 @@
             "name": "active",
             "size": 4
           }
+        ],
+        [
+          {
+            "name": "slug",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "gyakori_kerdeseks",
+            "size": 6
+          }
         ]
-      ],
-      "list": [
-        "id",
-        "headingImage",
-        "title",
-        "description"
       ]
     }
   },

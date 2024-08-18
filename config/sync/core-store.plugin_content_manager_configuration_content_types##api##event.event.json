@@ -82,7 +82,7 @@
           "description": "A böngésző címsorában megjelenő aloldal URL",
           "placeholder": "",
           "visible": true,
-          "editable": true
+          "editable": false
         },
         "list": {
           "label": "slug",
@@ -161,6 +161,34 @@
           "sortable": false
         }
       },
+      "description": {
+        "edit": {
+          "label": "Rövid leírás (Max. 255 karakter)",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "description",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "location": {
+        "edit": {
+          "label": "Lokáció",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "location",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -236,6 +264,12 @@
         ],
         [
           {
+            "name": "description",
+            "size": 6
+          }
+        ],
+        [
+          {
             "name": "body",
             "size": 12
           }
@@ -258,6 +292,12 @@
           {
             "name": "eventend",
             "size": 4
+          }
+        ],
+        [
+          {
+            "name": "location",
+            "size": 12
           }
         ],
         [

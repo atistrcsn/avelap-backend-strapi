@@ -3,7 +3,7 @@
   "value": {
     "uid": "api::tanusagtetel.tanusagtetel",
     "settings": {
-      "bulkable": false,
+      "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,

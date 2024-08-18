@@ -6,144 +6,111 @@
     {
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
-      "subject": "api::event.event",
+      "subject": "api::gyakori-kerdes.gyakori-kerdes",
       "properties": {
         "fields": [
-          "title",
-          "body",
-          "eventstart",
-          "eventend",
-          "slug",
-          "registrationUrl",
-          "registrationUntilDate",
-          "headingImage",
-          "eventtype",
-          "eventplace"
+          "kerdes",
+          "valasz",
+          "rank"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.delete",
       "actionParameters": {},
-      "subject": "api::event.event",
+      "subject": "api::gyakori-kerdes.gyakori-kerdes",
       "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.publish",
       "actionParameters": {},
-      "subject": "api::event.event",
+      "subject": "api::gyakori-kerdes.gyakori-kerdes",
       "properties": {},
       "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
-      "subject": "api::event.event",
+      "subject": "api::gyakori-kerdes.gyakori-kerdes",
       "properties": {
         "fields": [
-          "title",
-          "body",
-          "eventstart",
-          "eventend",
-          "slug",
-          "registrationUrl",
-          "registrationUntilDate",
-          "headingImage",
-          "eventtype",
-          "eventplace"
+          "kerdes",
+          "valasz",
+          "rank"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
-      "subject": "api::event.event",
+      "subject": "api::gyakori-kerdes.gyakori-kerdes",
       "properties": {
         "fields": [
-          "title",
-          "body",
-          "eventstart",
-          "eventend",
-          "slug",
-          "registrationUrl",
-          "registrationUntilDate",
-          "headingImage",
-          "eventtype",
-          "eventplace"
+          "kerdes",
+          "valasz",
+          "rank"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
-      "subject": "api::eventtype.eventtype",
+      "subject": "api::tanitas.tanitas",
       "properties": {
         "fields": [
-          "title",
-          "description",
-          "descriptionLongHTML",
-          "headingImage",
-          "active"
+          "cim",
+          "video",
+          "leiras",
+          "rank"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.delete",
       "actionParameters": {},
-      "subject": "api::eventtype.eventtype",
+      "subject": "api::tanitas.tanitas",
       "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::tanitas.tanitas",
+      "properties": {},
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
-      "subject": "api::eventtype.eventtype",
+      "subject": "api::tanitas.tanitas",
       "properties": {
         "fields": [
-          "title",
-          "description",
-          "descriptionLongHTML",
-          "headingImage",
-          "active"
+          "cim",
+          "video",
+          "leiras",
+          "rank"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
-      "subject": "api::eventtype.eventtype",
+      "subject": "api::tanitas.tanitas",
       "properties": {
         "fields": [
-          "title",
-          "description",
-          "descriptionLongHTML",
-          "headingImage",
-          "active"
+          "cim",
+          "video",
+          "leiras",
+          "rank"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::upload.assets.copy-link",

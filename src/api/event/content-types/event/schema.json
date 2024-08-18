@@ -29,7 +29,8 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true
     },
     "registrationUrl": {
       "type": "string",
@@ -54,6 +55,15 @@
     "eventplace": {
       "type": "string",
       "required": true
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 255,
+      "required": true
+    },
+    "location": {
+      "type": "customField",
+      "customField": "plugin::google-maps.location-picker"
     }
   }
 }

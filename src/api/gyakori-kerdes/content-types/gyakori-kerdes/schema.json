@@ -4,7 +4,8 @@
   "info": {
     "singularName": "gyakori-kerdes",
     "pluralName": "gyakori-kerdesek",
-    "displayName": "Gyakori kérdések"
+    "displayName": "Gyakori kérdések",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,12 @@
     },
     "rank": {
       "type": "integer"
+    },
+    "program": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::eventtype.eventtype",
+      "inversedBy": "gyakori_kerdeseks"
     }
   }
 }

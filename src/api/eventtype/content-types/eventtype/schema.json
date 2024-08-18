@@ -41,6 +41,17 @@
     },
     "rank": {
       "type": "integer"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "gyakori_kerdeseks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gyakori-kerdes.gyakori-kerdes",
+      "mappedBy": "program"
     }
   }
 }

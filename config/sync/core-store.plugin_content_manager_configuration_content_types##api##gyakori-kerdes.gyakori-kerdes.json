@@ -62,6 +62,21 @@
           "sortable": true
         }
       },
+      "program": {
+        "edit": {
+          "label": "Program",
+          "description": "Melyik programhoz, esemény típushoz kapcsolódik?",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "title"
+        },
+        "list": {
+          "label": "program",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -134,12 +149,19 @@
             "name": "valasz",
             "size": 12
           }
+        ],
+        [
+          {
+            "name": "program",
+            "size": 6
+          }
         ]
       ],
       "list": [
         "id",
         "kerdes",
-        "updatedAt"
+        "updatedAt",
+        "program"
       ]
     }
   },

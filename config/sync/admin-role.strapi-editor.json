@@ -18,7 +18,8 @@
           "registrationUntilDate",
           "headingImage",
           "eventtype",
-          "eventplace"
+          "eventplace",
+          "description"
         ]
       },
       "conditions": []
@@ -52,7 +53,8 @@
           "registrationUntilDate",
           "headingImage",
           "eventtype",
-          "eventplace"
+          "eventplace",
+          "description"
         ]
       },
       "conditions": []
@@ -72,7 +74,8 @@
           "registrationUntilDate",
           "headingImage",
           "eventtype",
-          "eventplace"
+          "eventplace",
+          "description"
         ]
       },
       "conditions": []
@@ -87,7 +90,8 @@
           "description",
           "descriptionLongHTML",
           "headingImage",
-          "active"
+          "active",
+          "slug"
         ]
       },
       "conditions": []
@@ -109,7 +113,8 @@
           "description",
           "descriptionLongHTML",
           "headingImage",
-          "active"
+          "active",
+          "slug"
         ]
       },
       "conditions": []
@@ -124,7 +129,8 @@
           "description",
           "descriptionLongHTML",
           "headingImage",
-          "active"
+          "active",
+          "slug"
         ]
       },
       "conditions": []
@@ -279,6 +285,62 @@
     {
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
+      "subject": "api::tanitas.tanitas",
+      "properties": {
+        "fields": [
+          "cim",
+          "video",
+          "leiras",
+          "rank"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::tanitas.tanitas",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::tanitas.tanitas",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::tanitas.tanitas",
+      "properties": {
+        "fields": [
+          "cim",
+          "video",
+          "leiras",
+          "rank"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::tanitas.tanitas",
+      "properties": {
+        "fields": [
+          "cim",
+          "video",
+          "leiras",
+          "rank"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
       "subject": "api::tanusagtetel.tanusagtetel",
       "properties": {
         "fields": [
@@ -330,13 +392,6 @@
           "rank"
         ]
       },
-      "conditions": []
-    },
-    {
-      "action": "plugin::drag-drop-content-types.read",
-      "actionParameters": {},
-      "subject": null,
-      "properties": {},
       "conditions": []
     },
     {

@@ -482,6 +482,46 @@ export interface PluginUploadFolder extends Schema.CollectionType {
   };
 }
 
+export interface PluginGoogleMapsConfig extends Schema.SingleType {
+  collectionName: 'google_maps_configs';
+  info: {
+    singularName: 'config';
+    pluralName: 'configs';
+    displayName: 'Google Maps Config';
+  };
+  options: {
+    populateCreatorFields: false;
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    googleMapsKey: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<''>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'plugin::google-maps.config',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'plugin::google-maps.config',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginI18NLocale extends Schema.CollectionType {
   collectionName: 'i18n_locale';
   info: {
@@ -697,7 +737,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
     body: Attribute.Blocks & Attribute.Required;
     eventstart: Attribute.Date;
     eventend: Attribute.Date;
-    slug: Attribute.UID<'api::event.event', 'title'>;
+    slug: Attribute.UID<'api::event.event', 'title'> & Attribute.Required;
     registrationUrl: Attribute.String;
     registrationUntilDate: Attribute.Date;
     headingImage: Attribute.Media;
@@ -707,6 +747,13 @@ export interface ApiEventEvent extends Schema.CollectionType {
       'api::eventtype.eventtype'
     >;
     eventplace: Attribute.String & Attribute.Required;
+    description: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    location: Attribute.JSON &
+      Attribute.CustomField<'plugin::google-maps.location-picker'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -751,6 +798,13 @@ export interface ApiEventtypeEventtype extends Schema.CollectionType {
     headingImage: Attribute.Media & Attribute.Required;
     active: Attribute.Boolean & Attribute.Required & Attribute.DefaultTo<false>;
     rank: Attribute.Integer;
+    slug: Attribute.UID<'api::eventtype.eventtype', 'title'> &
+      Attribute.Required;
+    gyakori_kerdeseks: Attribute.Relation<
+      'api::eventtype.eventtype',
+      'oneToMany',
+      'api::gyakori-kerdes.gyakori-kerdes'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -774,6 +828,7 @@ export interface ApiGyakoriKerdesGyakoriKerdes extends Schema.CollectionType {
     singularName: 'gyakori-kerdes';
     pluralName: 'gyakori-kerdesek';
     displayName: 'Gyakori k\u00E9rd\u00E9sek';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -786,6 +841,11 @@ export interface ApiGyakoriKerdesGyakoriKerdes extends Schema.CollectionType {
       }>;
     valasz: Attribute.Blocks & Attribute.Required;
     rank: Attribute.Integer;
+    program: Attribute.Relation<
+      'api::gyakori-kerdes.gyakori-kerdes',
+      'manyToOne',
+      'api::eventtype.eventtype'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -860,6 +920,71 @@ export interface ApiKapcsolatOldalKapcsolatOldal extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::kapcsolat-oldal.kapcsolat-oldal',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiQuoteQuote extends Schema.CollectionType {
+  collectionName: 'quotes';
+  info: {
+    singularName: 'quote';
+    pluralName: 'quotes';
+    displayName: 'Id\u00E9zetek';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    forras: Attribute.String & Attribute.Required;
+    idezet: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    rank: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::quote.quote',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::quote.quote',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSettingSetting extends Schema.SingleType {
+  collectionName: 'settings';
+  info: {
+    singularName: 'setting';
+    pluralName: 'settings';
+    displayName: '\u00C1ltal\u00E1nos be\u00E1ll\u00EDt\u00E1sok';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    karbantartas: Attribute.Component<'karbantartas.karbantartas'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::setting.setting',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::setting.setting',
       'oneToOne',
       'admin::user'
     > &
@@ -950,6 +1075,7 @@ declare module '@strapi/types' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
+      'plugin::google-maps.config': PluginGoogleMapsConfig;
       'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
@@ -959,6 +1085,8 @@ declare module '@strapi/types' {
       'api::gyakori-kerdes.gyakori-kerdes': ApiGyakoriKerdesGyakoriKerdes;
       'api::hasznos-cimek-oldal.hasznos-cimek-oldal': ApiHasznosCimekOldalHasznosCimekOldal;
       'api::kapcsolat-oldal.kapcsolat-oldal': ApiKapcsolatOldalKapcsolatOldal;
+      'api::quote.quote': ApiQuoteQuote;
+      'api::setting.setting': ApiSettingSetting;
       'api::tanitas.tanitas': ApiTanitasTanitas;
       'api::tanusagtetel.tanusagtetel': ApiTanusagtetelTanusagtetel;
     }
