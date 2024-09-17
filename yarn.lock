@@ -4598,6 +4598,7 @@ __metadata:
     "@strapi/provider-upload-cloudinary": "npm:^4.24.4"
     "@strapi/strapi": "npm:4.15.0"
     better-sqlite3: "npm:8.6.0"
+    json-loader: "npm:^0.5.7"
     pg: "npm:^8.11.5"
     pg-connection-string: "npm:^2.6.4"
     strapi-location-field-plugin: "npm:^1.2.3"
@@ -9311,6 +9312,13 @@ __metadata:
   version: 3.0.1
   resolution: "json-buffer@npm:3.0.1"
   checksum: 10c0/0d1c91569d9588e7eef2b49b59851f297f3ab93c7b35c7c221e288099322be6b562767d11e4821da500f3219542b9afd2e54c5dc573107c1126ed1080f8e96d7
+  languageName: node
+  linkType: hard
+
+"json-loader@npm:^0.5.7":
+  version: 0.5.7
+  resolution: "json-loader@npm:0.5.7"
+  checksum: 10c0/b155b81f644693b5418e595c127c552c34373f749d2d125df24cfe753de6b3b0af88dda5d58e7b65940ed03ec46c19fc3d09f53b932b45c9ae3ca1fb55e44a15
   languageName: node
   linkType: hard
 

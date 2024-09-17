@@ -746,7 +746,6 @@ export interface ApiEventEvent extends Schema.CollectionType {
       'oneToOne',
       'api::eventtype.eventtype'
     >;
-    eventplace: Attribute.String & Attribute.Required;
     description: Attribute.Text &
       Attribute.Required &
       Attribute.SetMinMaxLength<{

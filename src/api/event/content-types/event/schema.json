@@ -52,10 +52,6 @@
       "relation": "oneToOne",
       "target": "api::eventtype.eventtype"
     },
-    "eventplace": {
-      "type": "string",
-      "required": true
-    },
     "description": {
       "type": "text",
       "maxLength": 255,
