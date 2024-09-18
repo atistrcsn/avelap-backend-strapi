@@ -79,7 +79,7 @@
       "slug": {
         "edit": {
           "label": "SEO URL",
-          "description": "A böngésző címsorában megjelenő aloldal URL",
+          "description": "A böngésző címsorában megjelenő aloldal URL, automatikusan generált",
           "placeholder": "",
           "visible": true,
           "editable": false
@@ -147,20 +147,6 @@
           "sortable": true
         }
       },
-      "eventplace": {
-        "edit": {
-          "label": "Esemény helyszíne",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "esemény helyszíne",
-          "searchable": true,
-          "sortable": false
-        }
-      },
       "description": {
         "edit": {
           "label": "Rövid leírás (Max. 255 karakter)",
@@ -177,8 +163,8 @@
       },
       "location": {
         "edit": {
-          "label": "Lokáció",
-          "description": "",
+          "label": "Helyszín",
+          "description": "Nem kötelező megadni.",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -249,6 +235,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "headingImage",
+        "title",
+        "eventstart"
+      ],
       "edit": [
         [
           {
@@ -282,10 +274,6 @@
         ],
         [
           {
-            "name": "eventplace",
-            "size": 4
-          },
-          {
             "name": "eventstart",
             "size": 4
           },
@@ -302,12 +290,6 @@
         ],
         [
           {
-            "name": "slug",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "registrationUrl",
             "size": 6
           },
@@ -315,14 +297,13 @@
             "name": "registrationUntilDate",
             "size": 4
           }
+        ],
+        [
+          {
+            "name": "slug",
+            "size": 6
+          }
         ]
-      ],
-      "list": [
-        "id",
-        "headingImage",
-        "title",
-        "eventplace",
-        "eventstart"
       ]
     }
   },

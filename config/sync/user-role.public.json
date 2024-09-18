@@ -22,9 +22,6 @@
       "action": "api::gyakori-kerdes.gyakori-kerdes.findOne"
     },
     {
-      "action": "api::hasznos-cimek-oldal.hasznos-cimek-oldal.find"
-    },
-    {
       "action": "api::kapcsolat-oldal.kapcsolat-oldal.find"
     },
     {
@@ -34,19 +31,10 @@
       "action": "api::quote.quote.findOne"
     },
     {
-      "action": "api::setting.setting.find"
-    },
-    {
       "action": "api::tanitas.tanitas.find"
     },
     {
       "action": "api::tanitas.tanitas.findOne"
-    },
-    {
-      "action": "api::tanusagtetel.tanusagtetel.find"
-    },
-    {
-      "action": "api::tanusagtetel.tanusagtetel.findOne"
     },
     {
       "action": "plugin::users-permissions.auth.callback"

@@ -18,8 +18,8 @@
           "registrationUntilDate",
           "headingImage",
           "eventtype",
-          "eventplace",
-          "description"
+          "description",
+          "location"
         ]
       },
       "conditions": []
@@ -53,8 +53,8 @@
           "registrationUntilDate",
           "headingImage",
           "eventtype",
-          "eventplace",
-          "description"
+          "description",
+          "location"
         ]
       },
       "conditions": []
@@ -74,8 +74,8 @@
           "registrationUntilDate",
           "headingImage",
           "eventtype",
-          "eventplace",
-          "description"
+          "description",
+          "location"
         ]
       },
       "conditions": []
@@ -91,7 +91,9 @@
           "descriptionLongHTML",
           "headingImage",
           "active",
-          "slug"
+          "rank",
+          "slug",
+          "gyakori_kerdeseks"
         ]
       },
       "conditions": []
@@ -114,7 +116,9 @@
           "descriptionLongHTML",
           "headingImage",
           "active",
-          "slug"
+          "rank",
+          "slug",
+          "gyakori_kerdeseks"
         ]
       },
       "conditions": []
@@ -130,7 +134,9 @@
           "descriptionLongHTML",
           "headingImage",
           "active",
-          "slug"
+          "rank",
+          "slug",
+          "gyakori_kerdeseks"
         ]
       },
       "conditions": []
@@ -143,7 +149,8 @@
         "fields": [
           "kerdes",
           "valasz",
-          "rank"
+          "rank",
+          "program"
         ]
       },
       "conditions": []
@@ -170,7 +177,8 @@
         "fields": [
           "kerdes",
           "valasz",
-          "rank"
+          "rank",
+          "program"
         ]
       },
       "conditions": []
@@ -183,6 +191,154 @@
         "fields": [
           "kerdes",
           "valasz",
+          "rank",
+          "program"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
+      "properties": {
+        "fields": [
+          "tartalom"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
+      "properties": {
+        "fields": [
+          "tartalom"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
+      "properties": {
+        "fields": [
+          "tartalom"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::kapcsolat-oldal.kapcsolat-oldal",
+      "properties": {
+        "fields": [
+          "tartalom"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::kapcsolat-oldal.kapcsolat-oldal",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::kapcsolat-oldal.kapcsolat-oldal",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::kapcsolat-oldal.kapcsolat-oldal",
+      "properties": {
+        "fields": [
+          "tartalom"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::kapcsolat-oldal.kapcsolat-oldal",
+      "properties": {
+        "fields": [
+          "tartalom"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::quote.quote",
+      "properties": {
+        "fields": [
+          "forras",
+          "idezet",
+          "rank"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::quote.quote",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::quote.quote",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::quote.quote",
+      "properties": {
+        "fields": [
+          "forras",
+          "idezet",
+          "rank"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::quote.quote",
+      "properties": {
+        "fields": [
+          "forras",
+          "idezet",
           "rank"
         ]
       },
@@ -191,10 +347,14 @@
     {
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
-      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
+      "subject": "api::setting.setting",
       "properties": {
         "fields": [
-          "tartalom"
+          "karbantartas.isEnabled",
+          "karbantartas.title",
+          "karbantartas.desc",
+          "karbantartas.startDateTime",
+          "karbantartas.endDateTime"
         ]
       },
       "conditions": []
@@ -202,24 +362,21 @@
     {
       "action": "plugin::content-manager.explorer.delete",
       "actionParameters": {},
-      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
+      "subject": "api::setting.setting",
       "properties": {},
       "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
-      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
+      "subject": "api::setting.setting",
       "properties": {
         "fields": [
-          "tartalom"
+          "karbantartas.isEnabled",
+          "karbantartas.title",
+          "karbantartas.desc",
+          "karbantartas.startDateTime",
+          "karbantartas.endDateTime"
         ]
       },
       "conditions": []
@@ -227,57 +384,14 @@
     {
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
-      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
+      "subject": "api::setting.setting",
       "properties": {
         "fields": [
-          "tartalom"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.create",
-      "actionParameters": {},
-      "subject": "api::kapcsolat-oldal.kapcsolat-oldal",
-      "properties": {
-        "fields": [
-          "tartalom"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "api::kapcsolat-oldal.kapcsolat-oldal",
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::kapcsolat-oldal.kapcsolat-oldal",
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.read",
-      "actionParameters": {},
-      "subject": "api::kapcsolat-oldal.kapcsolat-oldal",
-      "properties": {
-        "fields": [
-          "tartalom"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.update",
-      "actionParameters": {},
-      "subject": "api::kapcsolat-oldal.kapcsolat-oldal",
-      "properties": {
-        "fields": [
-          "tartalom"
+          "karbantartas.isEnabled",
+          "karbantartas.title",
+          "karbantartas.desc",
+          "karbantartas.startDateTime",
+          "karbantartas.endDateTime"
         ]
       },
       "conditions": []

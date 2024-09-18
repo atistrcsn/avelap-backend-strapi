@@ -193,12 +193,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "headingImage",
-        "title",
-        "description"
-      ],
       "edit": [
         [
           {
@@ -235,13 +229,13 @@
             "name": "slug",
             "size": 12
           }
-        ],
-        [
-          {
-            "name": "gyakori_kerdeseks",
-            "size": 6
-          }
         ]
+      ],
+      "list": [
+        "id",
+        "headingImage",
+        "title",
+        "description"
       ]
     }
   },
