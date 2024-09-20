@@ -5,7 +5,7 @@ export default {
       hu: {
         "Settings.application.customization.menu-logo.carousel-hint":
           "Cserélje le a logót a navigáció felett",
-        "app.components.LeftMenu.navbrand.title": "AVE Admin",
+        "app.components.LeftMenu.navbrand.title": "Avelap.hu",
         "app.components.LeftMenu.navbrand.workplace": "Tartalomkezelő felület",
           "upload.apiError.FileTooBig":
           "A feltöltött fájl meghaladja a megengedett maximális fájlméretet.",
