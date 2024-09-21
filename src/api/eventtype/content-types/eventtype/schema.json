@@ -4,11 +4,11 @@
   "info": {
     "singularName": "eventtype",
     "pluralName": "eventtypes",
-    "displayName": "Programok, esemény típusok",
+    "displayName": "Programok",
     "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
@@ -42,16 +42,21 @@
     "rank": {
       "type": "integer"
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "title",
-      "required": true
-    },
     "gyakori_kerdeseks": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::gyakori-kerdes.gyakori-kerdes",
       "mappedBy": "program"
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

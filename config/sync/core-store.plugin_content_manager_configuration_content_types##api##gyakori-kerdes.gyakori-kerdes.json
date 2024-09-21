@@ -31,7 +31,7 @@
         "list": {
           "label": "kerdes",
           "searchable": true,
-          "sortable": true
+          "sortable": false
         }
       },
       "valasz": {
@@ -59,7 +59,7 @@
         "list": {
           "label": "rank",
           "searchable": true,
-          "sortable": true
+          "sortable": false
         }
       },
       "program": {
@@ -74,7 +74,7 @@
         "list": {
           "label": "program",
           "searchable": true,
-          "sortable": true
+          "sortable": false
         }
       },
       "createdAt": {
@@ -158,9 +158,7 @@
         ]
       ],
       "list": [
-        "id",
         "kerdes",
-        "updatedAt",
         "program"
       ]
     }

@@ -13,13 +13,25 @@
           "body",
           "eventstart",
           "eventend",
-          "slug",
           "registrationUrl",
           "registrationUntilDate",
           "headingImage",
           "eventtype",
           "description",
-          "location"
+          "location",
+          "slug",
+          "seo.metaTitle",
+          "seo.metaDescription",
+          "seo.metaImage",
+          "seo.metaSocial.socialNetwork",
+          "seo.metaSocial.title",
+          "seo.metaSocial.description",
+          "seo.metaSocial.image",
+          "seo.keywords",
+          "seo.metaRobots",
+          "seo.structuredData",
+          "seo.metaViewport",
+          "seo.canonicalURL"
         ]
       },
       "conditions": []
@@ -48,13 +60,25 @@
           "body",
           "eventstart",
           "eventend",
-          "slug",
           "registrationUrl",
           "registrationUntilDate",
           "headingImage",
           "eventtype",
           "description",
-          "location"
+          "location",
+          "slug",
+          "seo.metaTitle",
+          "seo.metaDescription",
+          "seo.metaImage",
+          "seo.metaSocial.socialNetwork",
+          "seo.metaSocial.title",
+          "seo.metaSocial.description",
+          "seo.metaSocial.image",
+          "seo.keywords",
+          "seo.metaRobots",
+          "seo.structuredData",
+          "seo.metaViewport",
+          "seo.canonicalURL"
         ]
       },
       "conditions": []
@@ -69,13 +93,25 @@
           "body",
           "eventstart",
           "eventend",
-          "slug",
           "registrationUrl",
           "registrationUntilDate",
           "headingImage",
           "eventtype",
           "description",
-          "location"
+          "location",
+          "slug",
+          "seo.metaTitle",
+          "seo.metaDescription",
+          "seo.metaImage",
+          "seo.metaSocial.socialNetwork",
+          "seo.metaSocial.title",
+          "seo.metaSocial.description",
+          "seo.metaSocial.image",
+          "seo.keywords",
+          "seo.metaRobots",
+          "seo.structuredData",
+          "seo.metaViewport",
+          "seo.canonicalURL"
         ]
       },
       "conditions": []
@@ -92,14 +128,33 @@
           "headingImage",
           "active",
           "rank",
+          "gyakori_kerdeseks",
           "slug",
-          "gyakori_kerdeseks"
+          "seo.metaTitle",
+          "seo.metaDescription",
+          "seo.metaImage",
+          "seo.metaSocial.socialNetwork",
+          "seo.metaSocial.title",
+          "seo.metaSocial.description",
+          "seo.metaSocial.image",
+          "seo.keywords",
+          "seo.metaRobots",
+          "seo.structuredData",
+          "seo.metaViewport",
+          "seo.canonicalURL"
         ]
       },
       "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::eventtype.eventtype",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
       "actionParameters": {},
       "subject": "api::eventtype.eventtype",
       "properties": {},
@@ -117,8 +172,20 @@
           "headingImage",
           "active",
           "rank",
+          "gyakori_kerdeseks",
           "slug",
-          "gyakori_kerdeseks"
+          "seo.metaTitle",
+          "seo.metaDescription",
+          "seo.metaImage",
+          "seo.metaSocial.socialNetwork",
+          "seo.metaSocial.title",
+          "seo.metaSocial.description",
+          "seo.metaSocial.image",
+          "seo.keywords",
+          "seo.metaRobots",
+          "seo.structuredData",
+          "seo.metaViewport",
+          "seo.canonicalURL"
         ]
       },
       "conditions": []
@@ -135,8 +202,20 @@
           "headingImage",
           "active",
           "rank",
+          "gyakori_kerdeseks",
           "slug",
-          "gyakori_kerdeseks"
+          "seo.metaTitle",
+          "seo.metaDescription",
+          "seo.metaImage",
+          "seo.metaSocial.socialNetwork",
+          "seo.metaSocial.title",
+          "seo.metaSocial.description",
+          "seo.metaSocial.image",
+          "seo.keywords",
+          "seo.metaRobots",
+          "seo.structuredData",
+          "seo.metaViewport",
+          "seo.canonicalURL"
         ]
       },
       "conditions": []
@@ -875,6 +954,13 @@
     },
     {
       "action": "plugin::i18n.locale.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::seo.read",
       "actionParameters": {},
       "subject": null,
       "properties": {},

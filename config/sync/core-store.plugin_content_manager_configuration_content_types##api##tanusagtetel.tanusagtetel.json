@@ -3,7 +3,7 @@
   "value": {
     "uid": "api::tanusagtetel.tanusagtetel",
     "settings": {
-      "bulkable": true,
+      "bulkable": false,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
@@ -31,7 +31,7 @@
         "list": {
           "label": "cim",
           "searchable": true,
-          "sortable": true
+          "sortable": false
         }
       },
       "video": {
@@ -59,7 +59,7 @@
         "list": {
           "label": "leiras",
           "searchable": true,
-          "sortable": true
+          "sortable": false
         }
       },
       "rank": {
@@ -157,10 +157,8 @@
         ]
       ],
       "list": [
-        "id",
         "cim",
-        "leiras",
-        "createdAt"
+        "leiras"
       ]
     }
   },

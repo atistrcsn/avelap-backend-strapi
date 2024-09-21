@@ -482,6 +482,45 @@ export interface PluginUploadFolder extends Schema.CollectionType {
   };
 }
 
+export interface PluginSlugifySlug extends Schema.CollectionType {
+  collectionName: 'slugs';
+  info: {
+    singularName: 'slug';
+    pluralName: 'slugs';
+    displayName: 'slug';
+  };
+  options: {
+    draftAndPublish: false;
+    comment: '';
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    slug: Attribute.Text;
+    count: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'plugin::slugify.slug',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'plugin::slugify.slug',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginGoogleMapsConfig extends Schema.SingleType {
   collectionName: 'google_maps_configs';
   info: {
@@ -737,7 +776,6 @@ export interface ApiEventEvent extends Schema.CollectionType {
     body: Attribute.Blocks & Attribute.Required;
     eventstart: Attribute.Date;
     eventend: Attribute.Date;
-    slug: Attribute.UID<'api::event.event', 'title'> & Attribute.Required;
     registrationUrl: Attribute.String;
     registrationUntilDate: Attribute.Date;
     headingImage: Attribute.Media;
@@ -753,6 +791,8 @@ export interface ApiEventEvent extends Schema.CollectionType {
       }>;
     location: Attribute.JSON &
       Attribute.CustomField<'plugin::google-maps.location-picker'>;
+    slug: Attribute.String & Attribute.Required & Attribute.Unique;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -776,11 +816,11 @@ export interface ApiEventtypeEventtype extends Schema.CollectionType {
   info: {
     singularName: 'eventtype';
     pluralName: 'eventtypes';
-    displayName: 'Programok, esem\u00E9ny t\u00EDpusok';
+    displayName: 'Programok';
     description: '';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     title: Attribute.String &
@@ -797,15 +837,16 @@ export interface ApiEventtypeEventtype extends Schema.CollectionType {
     headingImage: Attribute.Media & Attribute.Required;
     active: Attribute.Boolean & Attribute.Required & Attribute.DefaultTo<false>;
     rank: Attribute.Integer;
-    slug: Attribute.UID<'api::eventtype.eventtype', 'title'> &
-      Attribute.Required;
     gyakori_kerdeseks: Attribute.Relation<
       'api::eventtype.eventtype',
       'oneToMany',
       'api::gyakori-kerdes.gyakori-kerdes'
     >;
+    slug: Attribute.String & Attribute.Required & Attribute.Unique;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::eventtype.eventtype',
       'oneToOne',
@@ -1074,6 +1115,7 @@ declare module '@strapi/types' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
+      'plugin::slugify.slug': PluginSlugifySlug;
       'plugin::google-maps.config': PluginGoogleMapsConfig;
       'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;

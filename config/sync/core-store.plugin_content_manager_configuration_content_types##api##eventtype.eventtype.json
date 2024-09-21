@@ -3,7 +3,7 @@
   "value": {
     "uid": "api::eventtype.eventtype",
     "settings": {
-      "bulkable": true,
+      "bulkable": false,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
@@ -31,7 +31,7 @@
         "list": {
           "label": "cím",
           "searchable": true,
-          "sortable": true
+          "sortable": false
         }
       },
       "description": {
@@ -45,7 +45,7 @@
         "list": {
           "label": "rövid leírás",
           "searchable": true,
-          "sortable": true
+          "sortable": false
         }
       },
       "descriptionLongHTML": {
@@ -104,20 +104,6 @@
           "sortable": true
         }
       },
-      "slug": {
-        "edit": {
-          "label": "SEO URL",
-          "description": "A böngésző címsorában megjelenő aloldal URL",
-          "placeholder": "",
-          "visible": true,
-          "editable": false
-        },
-        "list": {
-          "label": "slug",
-          "searchable": true,
-          "sortable": true
-        }
-      },
       "gyakori_kerdeseks": {
         "edit": {
           "label": "gyakori_kerdeseks",
@@ -129,6 +115,34 @@
         },
         "list": {
           "label": "gyakori_kerdeseks",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "slug": {
+        "edit": {
+          "label": "SEO URL",
+          "description": "A böngésző címsorában megjelenő aloldal URL",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "slug",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "seo": {
+        "edit": {
+          "label": "Kereső optimalizálás",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "seo",
           "searchable": false,
           "sortable": false
         }
@@ -229,13 +243,19 @@
             "name": "slug",
             "size": 12
           }
+        ],
+        [
+          {
+            "name": "seo",
+            "size": 12
+          }
         ]
       ],
       "list": [
-        "id",
         "headingImage",
         "title",
-        "description"
+        "description",
+        "seo"
       ]
     }
   },

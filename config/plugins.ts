@@ -14,10 +14,28 @@ export default ({ env }) => ({
       },
     },
   },
+  seo: {
+    enabled: true,
+  },
   "drag-drop-content-types": {
     enabled: true,
   },
   "video-field": {
     enabled: true,
+  },
+  slugify: {
+    enabled: true,
+    config: {
+      contentTypes: {
+        eventtype: {
+          field: "slug",
+          references: "title",
+        },
+        event: {
+          field: "slug",
+          references: "title",
+        },
+      },
+    },
   },
 });

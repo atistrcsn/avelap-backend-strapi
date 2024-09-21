@@ -31,7 +31,7 @@
         "list": {
           "label": "cim",
           "searchable": true,
-          "sortable": true
+          "sortable": false
         }
       },
       "video": {
@@ -59,7 +59,7 @@
         "list": {
           "label": "leiras",
           "searchable": true,
-          "sortable": true
+          "sortable": false
         }
       },
       "rank": {
@@ -157,7 +157,6 @@
         ]
       ],
       "list": [
-        "id",
         "cim",
         "leiras"
       ]

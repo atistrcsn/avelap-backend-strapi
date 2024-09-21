@@ -3,7 +3,7 @@
   "value": {
     "uid": "api::event.event",
     "settings": {
-      "bulkable": true,
+      "bulkable": false,
       "filterable": true,
       "searchable": true,
       "pageSize": 20,
@@ -59,7 +59,7 @@
         "list": {
           "label": "esemény kezdete",
           "searchable": true,
-          "sortable": true
+          "sortable": false
         }
       },
       "eventend": {
@@ -71,28 +71,14 @@
           "editable": true
         },
         "list": {
-          "label": "eventend",
+          "label": "esemény vége",
           "searchable": true,
-          "sortable": true
-        }
-      },
-      "slug": {
-        "edit": {
-          "label": "SEO URL",
-          "description": "A böngésző címsorában megjelenő aloldal URL, automatikusan generált",
-          "placeholder": "",
-          "visible": true,
-          "editable": false
-        },
-        "list": {
-          "label": "slug",
-          "searchable": true,
-          "sortable": true
+          "sortable": false
         }
       },
       "registrationUrl": {
         "edit": {
-          "label": "Eseményre hol lehet regisztrálni?",
+          "label": "Eseményre hol lehet regisztrálni (URL cím)?",
           "description": "Ez a regisztrációs űrlapra mutató URL legyen",
           "placeholder": "",
           "visible": true,
@@ -142,7 +128,7 @@
           "mainField": "title"
         },
         "list": {
-          "label": "eventtype",
+          "label": "program",
           "searchable": true,
           "sortable": true
         }
@@ -171,6 +157,34 @@
         },
         "list": {
           "label": "location",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "slug": {
+        "edit": {
+          "label": "SEO URL",
+          "description": "A böngésző címsorában megjelenő aloldal URL, automatikusan generált",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "slug",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "seo": {
+        "edit": {
+          "label": "Kereső optimalizálás",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "seo",
           "searchable": false,
           "sortable": false
         }
@@ -235,12 +249,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "headingImage",
-        "title",
-        "eventstart"
-      ],
       "edit": [
         [
           {
@@ -284,12 +292,6 @@
         ],
         [
           {
-            "name": "location",
-            "size": 12
-          }
-        ],
-        [
-          {
             "name": "registrationUrl",
             "size": 6
           },
@@ -300,10 +302,29 @@
         ],
         [
           {
+            "name": "location",
+            "size": 12
+          }
+        ],
+        [
+          {
             "name": "slug",
             "size": 6
           }
+        ],
+        [
+          {
+            "name": "seo",
+            "size": 12
+          }
         ]
+      ],
+      "list": [
+        "headingImage",
+        "title",
+        "eventstart",
+        "eventend",
+        "eventtype"
       ]
     }
   },
