@@ -18,7 +18,7 @@
           "headingImage",
           "eventtype",
           "description",
-          "location",
+          "slug",
           "seo.metaTitle",
           "seo.metaDescription",
           "seo.metaImage",
@@ -64,7 +64,6 @@
           "headingImage",
           "eventtype",
           "description",
-          "location",
           "slug",
           "seo.metaTitle",
           "seo.metaDescription",
@@ -97,7 +96,7 @@
           "headingImage",
           "eventtype",
           "description",
-          "location",
+          "slug",
           "seo.metaTitle",
           "seo.metaDescription",
           "seo.metaImage",
@@ -138,7 +137,8 @@
           "seo.metaRobots",
           "seo.structuredData",
           "seo.metaViewport",
-          "seo.canonicalURL"
+          "seo.canonicalURL",
+          "slug"
         ]
       },
       "conditions": []
@@ -211,7 +211,8 @@
           "seo.metaRobots",
           "seo.structuredData",
           "seo.metaViewport",
-          "seo.canonicalURL"
+          "seo.canonicalURL",
+          "slug"
         ]
       },
       "conditions": []

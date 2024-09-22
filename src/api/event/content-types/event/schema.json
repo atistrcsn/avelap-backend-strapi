@@ -52,10 +52,6 @@
       "maxLength": 255,
       "required": true
     },
-    "location": {
-      "type": "customField",
-      "customField": "plugin::google-maps.location-picker"
-    },
     "slug": {
       "type": "string",
       "required": true,

@@ -147,20 +147,6 @@
           "sortable": true
         }
       },
-      "location": {
-        "edit": {
-          "label": "Helyszín",
-          "description": "Nem kötelező megadni.",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "location",
-          "searchable": false,
-          "sortable": false
-        }
-      },
       "slug": {
         "edit": {
           "label": "SEO URL",
@@ -249,6 +235,13 @@
       }
     },
     "layouts": {
+      "list": [
+        "headingImage",
+        "title",
+        "eventstart",
+        "eventend",
+        "eventtype"
+      ],
       "edit": [
         [
           {
@@ -302,12 +295,6 @@
         ],
         [
           {
-            "name": "location",
-            "size": 12
-          }
-        ],
-        [
-          {
             "name": "slug",
             "size": 6
           }
@@ -318,13 +305,6 @@
             "size": 12
           }
         ]
-      ],
-      "list": [
-        "headingImage",
-        "title",
-        "eventstart",
-        "eventend",
-        "eventtype"
       ]
     }
   },

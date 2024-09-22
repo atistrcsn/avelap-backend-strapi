@@ -18,7 +18,6 @@
           "headingImage",
           "eventtype",
           "description",
-          "location",
           "slug",
           "seo.metaTitle",
           "seo.metaDescription",
@@ -65,7 +64,6 @@
           "headingImage",
           "eventtype",
           "description",
-          "location",
           "slug",
           "seo.metaTitle",
           "seo.metaDescription",
@@ -98,7 +96,6 @@
           "headingImage",
           "eventtype",
           "description",
-          "location",
           "slug",
           "seo.metaTitle",
           "seo.metaDescription",
@@ -919,13 +916,6 @@
     },
     {
       "action": "plugin::email.settings.read",
-      "actionParameters": {},
-      "subject": null,
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::google-maps.config",
       "actionParameters": {},
       "subject": null,
       "properties": {},
