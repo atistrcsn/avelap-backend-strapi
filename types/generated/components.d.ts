@@ -21,6 +21,20 @@ export interface KarbantartasKarbantartas extends Schema.Component {
   };
 }
 
+export interface SharedAddress extends Schema.Component {
+  collectionName: 'components_shared_addresses';
+  info: {
+    displayName: 'Address';
+    icon: 'pinMap';
+  };
+  attributes: {
+    postalcode: Attribute.String;
+    city: Attribute.String;
+    address: Attribute.String;
+    country: Attribute.String;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -76,6 +90,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'karbantartas.karbantartas': KarbantartasKarbantartas;
+      'shared.address': SharedAddress;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
     }

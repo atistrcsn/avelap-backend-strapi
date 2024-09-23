@@ -751,6 +751,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
       }>;
     slug: Attribute.String & Attribute.Required & Attribute.Unique;
     seo: Attribute.Component<'shared.seo'>;
+    location: Attribute.Component<'shared.address'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

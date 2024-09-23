@@ -30,7 +30,11 @@
           "seo.metaRobots",
           "seo.structuredData",
           "seo.metaViewport",
-          "seo.canonicalURL"
+          "seo.canonicalURL",
+          "location.postalcode",
+          "location.city",
+          "location.address",
+          "location.country"
         ]
       },
       "conditions": []
@@ -76,7 +80,11 @@
           "seo.metaRobots",
           "seo.structuredData",
           "seo.metaViewport",
-          "seo.canonicalURL"
+          "seo.canonicalURL",
+          "location.postalcode",
+          "location.city",
+          "location.address",
+          "location.country"
         ]
       },
       "conditions": []
@@ -108,7 +116,11 @@
           "seo.metaRobots",
           "seo.structuredData",
           "seo.metaViewport",
-          "seo.canonicalURL"
+          "seo.canonicalURL",
+          "location.postalcode",
+          "location.city",
+          "location.address",
+          "location.country"
         ]
       },
       "conditions": []

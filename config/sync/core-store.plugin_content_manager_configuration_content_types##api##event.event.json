@@ -175,6 +175,20 @@
           "sortable": false
         }
       },
+      "location": {
+        "edit": {
+          "label": "Esemény helyszíne",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "location",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -235,13 +249,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "headingImage",
-        "title",
-        "eventstart",
-        "eventend",
-        "eventtype"
-      ],
       "edit": [
         [
           {
@@ -301,10 +308,23 @@
         ],
         [
           {
+            "name": "location",
+            "size": 12
+          }
+        ],
+        [
+          {
             "name": "seo",
             "size": 12
           }
         ]
+      ],
+      "list": [
+        "headingImage",
+        "title",
+        "eventstart",
+        "eventend",
+        "eventtype"
       ]
     }
   },

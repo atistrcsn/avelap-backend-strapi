@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-09-22T11:32:32.041Z"
+    "x-generation-date": "2024-09-23T19:16:16.685Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -150,6 +150,9 @@
               },
               "seo": {
                 "$ref": "#/components/schemas/SharedSeoComponent"
+              },
+              "location": {
+                "$ref": "#/components/schemas/SharedAddressComponent"
               }
             }
           }
@@ -1499,6 +1502,9 @@
           "seo": {
             "$ref": "#/components/schemas/SharedSeoComponent"
           },
+          "location": {
+            "$ref": "#/components/schemas/SharedAddressComponent"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -1894,6 +1900,26 @@
             "type": "string"
           },
           "canonicalURL": {
+            "type": "string"
+          }
+        }
+      },
+      "SharedAddressComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "postalcode": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "country": {
             "type": "string"
           }
         }
