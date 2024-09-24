@@ -1,3 +1,2 @@
-### admin credentials for lcal develompent:
-admin@admin.hu
-Password1234
+### Steps to setup
+- set cachebuster webhook on admin page: <frontendURL>/cachebuster

@@ -126,6 +126,7 @@
           "active",
           "rank",
           "gyakori_kerdeseks",
+          "slug",
           "seo.metaTitle",
           "seo.metaDescription",
           "seo.metaImage",
@@ -137,8 +138,7 @@
           "seo.metaRobots",
           "seo.structuredData",
           "seo.metaViewport",
-          "seo.canonicalURL",
-          "slug"
+          "seo.canonicalURL"
         ]
       },
       "conditions": []
@@ -200,6 +200,7 @@
           "active",
           "rank",
           "gyakori_kerdeseks",
+          "slug",
           "seo.metaTitle",
           "seo.metaDescription",
           "seo.metaImage",
@@ -211,8 +212,7 @@
           "seo.metaRobots",
           "seo.structuredData",
           "seo.metaViewport",
-          "seo.canonicalURL",
-          "slug"
+          "seo.canonicalURL"
         ]
       },
       "conditions": []
@@ -269,53 +269,6 @@
           "valasz",
           "rank",
           "program"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.create",
-      "actionParameters": {},
-      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
-      "properties": {
-        "fields": [
-          "tartalom"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.read",
-      "actionParameters": {},
-      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
-      "properties": {
-        "fields": [
-          "tartalom"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.update",
-      "actionParameters": {},
-      "subject": "api::hasznos-cimek-oldal.hasznos-cimek-oldal",
-      "properties": {
-        "fields": [
-          "tartalom"
         ]
       },
       "conditions": []
