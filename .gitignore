@@ -122,3 +122,5 @@ build
 !.yarn/versions
 
 package-lock.json
+*.dmp
+db.backup

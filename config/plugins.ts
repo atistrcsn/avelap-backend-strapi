@@ -36,6 +36,8 @@ export default ({ env }) => ({
           references: "title",
         },
       },
+      slugifyWithCount: true,
+      shouldUpdateSlug: true,
     },
   },
 });

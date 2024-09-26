@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-09-24T10:39:12.331Z"
+    "x-generation-date": "2024-09-26T22:50:14.776Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -96,8 +96,7 @@
             "required": [
               "title",
               "body",
-              "description",
-              "slug"
+              "description"
             ],
             "type": "object",
             "properties": {
@@ -145,14 +144,14 @@
               "description": {
                 "type": "string"
               },
-              "slug": {
-                "type": "string"
-              },
               "seo": {
                 "$ref": "#/components/schemas/SharedSeoComponent"
               },
               "location": {
                 "$ref": "#/components/schemas/SharedAddressComponent"
+              },
+              "slug": {
+                "type": "string"
               }
             }
           }
@@ -209,8 +208,7 @@
         "required": [
           "title",
           "body",
-          "description",
-          "slug"
+          "description"
         ],
         "properties": {
           "title": {
@@ -1496,14 +1494,14 @@
           "description": {
             "type": "string"
           },
-          "slug": {
-            "type": "string"
-          },
           "seo": {
             "$ref": "#/components/schemas/SharedSeoComponent"
           },
           "location": {
             "$ref": "#/components/schemas/SharedAddressComponent"
+          },
+          "slug": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -1936,8 +1934,7 @@
               "description",
               "descriptionLongHTML",
               "headingImage",
-              "active",
-              "slug"
+              "active"
             ],
             "type": "object",
             "properties": {
@@ -2042,8 +2039,7 @@
           "description",
           "descriptionLongHTML",
           "headingImage",
-          "active",
-          "slug"
+          "active"
         ],
         "properties": {
           "title": {

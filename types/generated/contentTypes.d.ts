@@ -749,9 +749,9 @@ export interface ApiEventEvent extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
-    slug: Attribute.String & Attribute.Required & Attribute.Unique;
     seo: Attribute.Component<'shared.seo'>;
     location: Attribute.Component<'shared.address'>;
+    slug: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -801,7 +801,7 @@ export interface ApiEventtypeEventtype extends Schema.CollectionType {
       'oneToMany',
       'api::gyakori-kerdes.gyakori-kerdes'
     >;
-    slug: Attribute.String & Attribute.Required & Attribute.Unique;
+    slug: Attribute.String;
     seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

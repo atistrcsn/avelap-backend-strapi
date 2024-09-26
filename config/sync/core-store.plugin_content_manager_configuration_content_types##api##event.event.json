@@ -153,7 +153,7 @@
           "description": "A böngésző címsorában megjelenő aloldal URL, automatikusan generált",
           "placeholder": "",
           "visible": true,
-          "editable": true
+          "editable": false
         },
         "list": {
           "label": "slug",
